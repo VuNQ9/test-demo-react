@@ -3,10 +3,19 @@
 import React from "react";
 
 class MyComponent extends React.Component {
+
+    state = {
+        name: "VuNQ",
+        address: "Hoi dan IT",
+        age: 26
+    };
+
     //JSX
     render() {
         return (
-            <div>my first component</div>
+            <div>
+                My name is {this.state.name} and I'm from {this.state.address}
+            </div>
         );
     }
 }
