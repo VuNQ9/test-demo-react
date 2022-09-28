@@ -9,8 +9,8 @@ class MyComponent extends React.Component {
         listUsers: [
             { id: 1, name: "VuNQ9", age: 27 },
             { id: 2, name: "VuNQ1", age: 28 },
-            { id: 3, name: "VuNQ2", age: 20 },
-            { id: 4, name: "VuNQ3", age: 27 },
+            { id: 3, name: "VuNQ2", age: 16 },
+            { id: 4, name: "VuNQ3", age: 15 },
         ]
     }
     //JSX
