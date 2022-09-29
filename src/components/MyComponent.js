@@ -3,6 +3,7 @@
 import React from "react";
 import DisplayInfor from "./DisplayInfor";
 import AddUserInfor from "./AddUserInfor";
+import { toHaveAccessibleDescription } from "@testing-library/jest-dom/dist/matchers";
 
 class MyComponent extends React.Component {
     state = {
@@ -20,6 +21,14 @@ class MyComponent extends React.Component {
             listUsers: [userObject, ...this.state.listUsers]
         })
     }
+
+    handleDeleteUser = (userId) => {
+        let listUsersClone = [...this.state.listUsers];
+        listUsersClone = listUsersClone.filter(item => item.id !== userId);
+        this.setState({
+            listUsers: listUsersClone
+        })
+    }
     //JSX
     render() {
         const test = "VuNQ9999"
@@ -33,6 +42,7 @@ class MyComponent extends React.Component {
                 <br></br>
                 <DisplayInfor
                     listUsers={this.state.listUsers}
+                    handleDeleteUser={this.handleDeleteUser}
                 />
             </>
         );
