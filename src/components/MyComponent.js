@@ -22,8 +22,11 @@ class MyComponent extends React.Component {
     }
     //JSX
     render() {
+        const test = "VuNQ9999"
         return (
             <>
+                {test}
+                <br />
                 <AddUserInfor
                     handleAddNewUser={this.handleAddNewUser}
                 />
